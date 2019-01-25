@@ -7,9 +7,11 @@ services:
     ports:
       # Host runs Rstudio Serrver on 8787
       - "8788:8787"
+    env_file: 
+      # Template is secret_.env
+      - secret.env
     environment:
       - USER=rstudio
-      - PASSWORD=
       - ROOT=true
     volumes:
       - ~/Documents/R:/home/rstudio/R
