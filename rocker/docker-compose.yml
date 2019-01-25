@@ -1,18 +1,23 @@
 version: "3"
 
 services:
+  nginx-proxy:
+      image: jwilder/nginx-proxy
+      ports:
+        - 80:80
+      volumes:
+        - /var/run/docker.sock:/tmp/docker.sock:ro
+
   r:
     image: rocker/verse
     restart: always
-    ports:
-      # Host runs Rstudio Serrver on 8787
-      - "8788:8787"
     env_file: 
       # Template is secret_.env
       - secret.env
     environment:
       - USER=rstudio
       - ROOT=true
+      - VIRTUAL_HOST=rstudio.localhost
     volumes:
       # ln -s ~/Documents/R/ R
       - ./R:/home/rstudio/R
