@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  r:
+    image: rocker/verse
+    restart: always
+    ports:
+      # Host runs Rstudio Serrver on 8787
+      - "8788:8787"
+    environment:
+      - USER=rstudio
+      - PASSWORD=
+      - ROOT=true
+    volumes:
+      - ~/Documents/R:/home/rstudio/R
