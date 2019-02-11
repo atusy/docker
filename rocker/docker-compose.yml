@@ -9,7 +9,8 @@ services:
         - /var/run/docker.sock:/tmp/docker.sock:ro
 
   r:
-    image: rocker/verse
+    build:
+      context: .
     restart: always
     env_file: 
       # Template is secret_.env
@@ -21,3 +22,4 @@ services:
     volumes:
       # ln -s ~/Documents/R/ R
       - ./R:/home/rstudio/R
+      - /home/atusy:/home/atusy
