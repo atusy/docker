@@ -2,15 +2,16 @@ version: "3"
 
 services:
   nginx-proxy:
-      image: jwilder/nginx-proxy
-      ports:
-        - 80:80
-      volumes:
-        - /var/run/docker.sock:/tmp/docker.sock:ro
+    image: jwilder/nginx-proxy
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
 
   r:
-    build:
-      context: .
+    # image: atusy/atusyverse
+    build: "."
     restart: always
     env_file: 
       # Template is secret_.env
