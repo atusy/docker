@@ -1,14 +1,5 @@
 version: "3"
-
 services:
-  nginx-proxy:
-    image: jwilder/nginx-proxy
-    restart: always
-    ports:
-      - 80:80
-    volumes:
-      - /var/run/docker.sock:/tmp/docker.sock:ro
-
   r:
     # image: atusy/atusyverse
     build: "."
@@ -24,3 +15,4 @@ services:
       # ln -s ~/Documents/R/ R
       - ./R:/home/rstudio/R
       - /home/atusy:/home/atusy
+    network_mode: "bridge"
