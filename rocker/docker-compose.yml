@@ -4,6 +4,8 @@ services:
     # image: atusy/atusyverse
     build: "."
     restart: always
+    ports:
+      - "8787:8787"
     env_file: 
       # Template is secret_.env
       - secret.env

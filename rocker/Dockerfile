@@ -1,1 +1,1 @@
-FROM atusy/atusyverse:latest
+FROM atusy/atusyverse:dev
