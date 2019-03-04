@@ -16,8 +16,4 @@ RUN apt-get update \
     svglite \
   && Rscript -e "pacman::p_load_gh('atusy/qntmap@dev')"
 
-RUN rm /home/rstudio/.rstudio/monitored/user-settings
-
-COPY user-settings /home/rstudio/.rstudio/monitored/user-settings/user-settings
-
 CMD ["/init"]
