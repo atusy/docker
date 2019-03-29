@@ -14,6 +14,8 @@ RUN apt-get update \
     magick \
     needs \
     svglite \
+    # Not sure why required
+    bindrcpp \
   && Rscript -e "pacman::p_load_current_gh('atusy/qntmap@dev', 'atusy/mytools@dev')"
 
 CMD ["/init"]
