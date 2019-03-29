@@ -18,4 +18,10 @@ RUN apt-get update \
     bindrcpp \
   && Rscript -e "pacman::p_load_current_gh('atusy/qntmap@dev', 'atusy/mytools@dev')"
 
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+    # for gt
+    libglu1-mesa-dev \
+  && Rscript -e "pacman::p_load('rstudio/gt')"
+
 CMD ["/init"]
