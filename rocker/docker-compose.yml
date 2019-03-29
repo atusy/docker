@@ -16,5 +16,6 @@ services:
     volumes:
       # ln -s ~/Documents/R/ R
       - ./R:/home/rstudio/R
+      - ./.rstudio:/home/rstudio/.rstudio
       - /home/atusy:/home/atusy
     network_mode: "bridge"
