@@ -7,3 +7,6 @@
 [submodule "docker-gitea"]
 	path = docker-gitea
 	url = git://github.com/atusy/docker-gitea.git
+[submodule "jupyter"]
+	path = jupyter
+	url = git://github.com/atusy/docker-jupyter.git
