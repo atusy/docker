@@ -1,12 +1,12 @@
 [submodule "rocker"]
 	path = rocker
-	url = git://github.com/atusy/docker-rocker.git
+	url = git@github.com:atusy/docker-rocker.git
 [submodule "nginx-proxy"]
 	path = nginx-proxy
-	url = git://github.com/atusy/docker-nginx-proxy.git
+	url = git@github.com:atusy/docker-nginx-proxy.git
 [submodule "docker-gitea"]
 	path = docker-gitea
-	url = git://github.com/atusy/docker-gitea.git
+	url = git@github.com:atusy/docker-gitea.git
 [submodule "jupyter"]
 	path = jupyter
-	url = git://github.com/atusy/docker-jupyter.git
+	url = git@github.com:atusy/docker-jupyter.git
