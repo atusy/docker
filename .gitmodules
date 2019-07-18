@@ -10,3 +10,6 @@
 [submodule "jupyter"]
 	path = jupyter
 	url = git@github.com:atusy/docker-jupyter.git
+[submodule "syncthing"]
+	path = syncthing
+	url = git://github.com/atusy/docker-syncthing.git
